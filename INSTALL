@@ -1,0 +1,9 @@
+Building judgecoin
+
+See doc/readme-qt.rst for instructions on building judgecoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of judgecoin.
+
+See doc/build-*.txt for instructions on building apecoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of judgecoin.
