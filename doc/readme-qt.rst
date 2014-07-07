@@ -71,8 +71,8 @@ Mac OS X
 	
 	~/judgecoin $ qmake
 	~/judgecoin $ make
-	
-	OR
+
+OR
 
 - Open the .pro file in Qt Creator and build as normal (cmd-B)
 
