@@ -55,17 +55,30 @@ Mac OS X
 
 - Download and install `MacPorts`_.
 
+- Download and install `Home Brew`_. (copy and paste this into your terminal)
+
+	ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
 - Execute the following commands in a terminal to get the dependencies:
 
 ::
 
+	brew install boost (will take a LONG time, over 35 minutes)
 	sudo port selfupdate
-	sudo port install boost db48 miniupnpc
+	sudo port install db48 miniupnpc qrencode qt4-mac
+	
+	After dependencies are installed:
+	
+	~/judgecoin $ qmake
+	~/judgecoin $ make
+
+OR
 
 - Open the .pro file in Qt Creator and build as normal (cmd-B)
 
 .. _`Qt Mac OS X SDK`: http://qt.nokia.com/downloads/sdk-mac-os-cpp
 .. _`MacPorts`: http://www.macports.org/install.php
+.. _`Home Brew`: http://brew.sh
 
 
 Build configuration options
