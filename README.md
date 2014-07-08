@@ -1,5 +1,5 @@
 
-judgeCoin 
+Judgecoin 
 
 COIN SPECIFICATIONS
 - Total coins: Estimated 15,000,000 Between PoW and PoS blocks 
@@ -12,5 +12,7 @@ COIN SPECIFICATIONS
 - 60 second block target 
 - 110 confirmations for blocks to mature
 
-"Help support Judge Crypto by donating Judge Coin or Bitcoin. Your donation helps pay for coin related services, future developments, or sometimes just a reward for putting out a truly fair coin without a premine, instamine, or IPO."
+Help support the devs by <a href=" http://judgecoin.com/DONATE/tabid/97/Default.aspx" target="_blank">donating</a> Judgecoin or Bitcoin by using the in-app "DONATE" link.
+ Your donation helps pay for coin related services, future developments, or sometimes just
+ a reward for putting out a truly fair coin without a premine, instamine, or IPO.
 
