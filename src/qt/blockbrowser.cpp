@@ -7,6 +7,7 @@
 #include "bitcoinrpc.h"
 #include "transactionrecord.h"
 
+#include <QDesktopServices>
 #include <QUrl>
 #include <sstream>
 #include <string>
