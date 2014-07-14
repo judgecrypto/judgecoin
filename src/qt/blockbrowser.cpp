@@ -437,5 +437,5 @@ BlockBrowser::~BlockBrowser()
 
 void BlockBrowser::on_pushButton_clicked()
 {
- QDesktopServices::openUrl(QUrl("http://chainz.cryptoid.info/judge/", QUrl::TolerantMode));
+ QDesktopServices::openUrl(QUrl("http://chainz.cryptoid.info/judge/"));
 }
