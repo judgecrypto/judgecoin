@@ -1,7 +1,7 @@
 ---
 name: "judgecoin"
 suites:
-- "lucid"
+- "Precise Pangolin"
 architectures:
 - "i386"
 - "amd64"
