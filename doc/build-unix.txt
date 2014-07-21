@@ -61,7 +61,15 @@ Versions used in this release:
 
 Dependency Build Instructions: Ubuntu & Debian
 ----------------------------------------------
-sudo apt-get install build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev
+sudo apt-get install build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev qrencode
+
+Build miniupnpc from source:
+wget http://miniupnp.tuxfamily.org/files/download.php?file=miniupnpc-1.9.tar.gz -O miniupnpc-1.9.tar.gz
+tar xvfz miniupnpc-1.9.tar.gz
+cd miniupnpc-1.9/
+make
+sudo make install
+cd ..
 
 Dependency Build Instructions: Gentoo
 -------------------------------------
