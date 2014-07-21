@@ -16,8 +16,8 @@ StatisticsPage::StatisticsPage(QWidget *parent) :
     ui(new Ui::StatisticsPage)
 {
     ui->setupUi(this);
-    
-    setFixedSize(400, 420);
+/* setFixedSize(w, h) */    
+    setFixedSize(220, 420);
     
     connect(ui->startButton, SIGNAL(pressed()), this, SLOT(updateStatistics()));
 }
@@ -69,7 +69,7 @@ void StatisticsPage::updateStatistics()
     QString Qlpawrate = model->getLastBlockDate().toString();
 
     QString QPeers = QString::number(peers);
-    QString qVolume = QLocale(QLocale::English).toString(volume);
+    QString qVolume = QString::number(volume);
 
     if(nHeight > heightPrevious)
     {

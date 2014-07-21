@@ -59,8 +59,6 @@
       <attribute name="title">
        <string>Tab 1</string>
       </attribute>
-      <zorder>hide3</zorder>
-      <zorder>hide3</zorder>
      </widget>
      <widget class="QWidget" name="tab_5">
       <attribute name="title">
@@ -112,9 +110,9 @@
     <widget class="QPushButton" name="disconnect">
      <property name="geometry">
       <rect>
-       <x>642</x>
+       <x>600</x>
        <y>420</y>
-       <width>71</width>
+       <width>95</width>
        <height>28</height>
       </rect>
      </property>
@@ -122,6 +120,11 @@
       <string>Disconnect</string>
      </property>
     </widget>
+    <zorder>tab</zorder>
+    <zorder>lineEdit</zorder>
+    <zorder>userView</zorder>
+    <zorder>disconnect</zorder>
+    <zorder>hide3</zorder>
    </widget>
    <widget class="QWidget" name="hide3" native="true">
     <property name="geometry">
@@ -129,7 +132,7 @@
       <x>10</x>
       <y>10</y>
       <width>731</width>
-      <height>501</height>
+      <height>497</height>
      </rect>
     </property>
     <widget class="QWidget" name="layoutWidget">
@@ -226,7 +229,7 @@
     <widget class="QLineEdit" name="editPseudo">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>170</x>
        <y>160</y>
        <width>151</width>
        <height>22</height>
@@ -252,7 +255,7 @@
     <widget class="QPushButton" name="buttonConnect">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>170</x>
        <y>200</y>
        <width>151</width>
        <height>41</height>
@@ -268,9 +271,9 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>170</x>
        <y>130</y>
-       <width>121</width>
+       <width>141</width>
        <height>16</height>
       </rect>
      </property>

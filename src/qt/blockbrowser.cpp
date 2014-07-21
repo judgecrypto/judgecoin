@@ -7,6 +7,8 @@
 #include "bitcoinrpc.h"
 #include "transactionrecord.h"
 
+#include <QDesktopServices>
+#include <QUrl>
 #include <sstream>
 #include <string>
 double getBlockHardness(int height)
@@ -433,4 +435,9 @@ void BlockBrowser::setModel(ClientModel *model)
 BlockBrowser::~BlockBrowser()
 {
     delete ui;
+}
+
+void BlockBrowser::on_pushButton_clicked()
+{
+ QDesktopServices::openUrl(QUrl("http://chainz.cryptoid.info/judge/", QUrl::TolerantMode));
 }

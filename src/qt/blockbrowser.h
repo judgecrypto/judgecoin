@@ -58,6 +58,8 @@ public slots:
 
 private slots:
 
+    void on_pushButton_clicked();
+
 private:
     Ui::BlockBrowser *ui;
     ClientModel *model;
