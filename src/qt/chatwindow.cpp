@@ -213,3 +213,8 @@ ChatWindow::~ChatWindow()
         }
     }
 }
+
+void ChatWindow::on_commandLinkButton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://judgecoin.com/HELPDESK", QUrl::TolerantMode));
+}

@@ -120,11 +120,6 @@
       <string>Disconnect</string>
      </property>
     </widget>
-    <zorder>tab</zorder>
-    <zorder>lineEdit</zorder>
-    <zorder>userView</zorder>
-    <zorder>disconnect</zorder>
-    <zorder>hide3</zorder>
    </widget>
    <widget class="QWidget" name="hide3" native="true">
     <property name="geometry">
@@ -156,7 +151,7 @@
          </font>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20px; font-weight:600; color:#000000;&quot;&gt;JudgeCoin Chat&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20px; font-weight:600; color:#000000;&quot;&gt;Judgecoin Chat&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
@@ -281,6 +276,34 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connect to Trollbox :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
+    <widget class="QCommandLinkButton" name="commandLinkButton">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>360</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:40px;border:1px solid grey</string>
+     </property>
+     <property name="text">
+      <string>Open Help Desk Ticket</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../bitcoin.qrc">
+       <normaloff>:/icons/debugwindow</normaloff>:/icons/debugwindow</iconset>
+     </property>
+    </widget>
    </widget>
   </widget>
   <action name="actionQuit">
@@ -298,6 +321,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>
