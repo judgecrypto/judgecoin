@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>626</width>
+    <width>623</width>
     <height>505</height>
    </rect>
   </property>
@@ -33,7 +33,11 @@ font-family:'Open Sans,sans-serif';</string>
       </size>
      </property>
      <property name="frameShape">
+<<<<<<< HEAD
       <enum>QFrame::NoFrame</enum>
+=======
+      <enum>QFrame::StyledPanel</enum>
+>>>>>>> master
      </property>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
@@ -96,9 +100,12 @@ p, li { white-space: pre-wrap; }
         <property name="fieldGrowthPolicy">
          <enum>QFormLayout::FieldsStayAtSizeHint</enum>
         </property>
+<<<<<<< HEAD
         <property name="formAlignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
         </property>
+=======
+>>>>>>> master
         <property name="horizontalSpacing">
          <number>139</number>
         </property>
@@ -283,7 +290,7 @@ p, li { white-space: pre-wrap; }
            </font>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20px; font-weight:600; color:#000000;&quot;&gt;Judgecoin Statistics&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20px; font-weight:600; color:#000000;&quot;&gt;Judge Coin Statistics&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
