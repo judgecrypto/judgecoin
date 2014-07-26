@@ -26,8 +26,7 @@ namespace Checkpoints
         boost::assign::map_list_of
         ( 0,      hashGenesisBlock )
         ( 14399,  uint256("0x72587f981c2e822332fadd51b9a733a6b6e0761cba3d6a3fb9a58133218aeb1e"))
-		( 40616,  uint256("0xbc336780b5ff8fd619c1f116dc923bfc828302fd2208170c83391f8fa9941431"))
-		;
+	;
 
     // TestNet has no checkpoints
     static MapCheckpoints mapCheckpointsTestnet =
@@ -66,11 +65,11 @@ namespace Checkpoints
     }
 
     // judgecoin: synchronized checkpoint (centrally broadcasted)
-    uint256 hashSyncCheckpoint = 40616;
-    uint256 hashPendingCheckpoint = 40616;
+    uint256 hashSyncCheckpoint = 0;
+    uint256 hashPendingCheckpoint = 0;
     CSyncCheckpoint checkpointMessage;
     CSyncCheckpoint checkpointMessagePending;
-    uint256 hashInvalidCheckpoint = 40616;
+    uint256 hashInvalidCheckpoint = 0;
     CCriticalSection cs_hashSyncCheckpoint;
 
     // judgecoin: get last synchronized checkpoint
