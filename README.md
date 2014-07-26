@@ -1,5 +1,5 @@
 
-Judgecoin 
+Judgecoin - Now in full PoS mode! Wallet is now v1.1.1
 
 COIN SPECIFICATIONS
 - Total coins: Estimated 15,000,000 Between PoW and PoS blocks 
