@@ -13,8 +13,8 @@
   <widget class="QWidget" name="widget_2" native="true">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
+     <x>-5</x>
+     <y>-5</y>
      <width>741</width>
      <height>511</height>
     </rect>
@@ -39,7 +39,7 @@
       <rect>
        <x>10</x>
        <y>0</y>
-       <width>541</width>
+       <width>511</width>
        <height>451</height>
       </rect>
      </property>
@@ -50,7 +50,7 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <property name="tabsClosable">
       <bool>false</bool>
@@ -71,7 +71,7 @@
       <rect>
        <x>10</x>
        <y>460</y>
-       <width>701</width>
+       <width>681</width>
        <height>30</height>
       </rect>
      </property>
@@ -91,9 +91,9 @@
     <widget class="QListView" name="userView">
      <property name="geometry">
       <rect>
-       <x>560</x>
+       <x>530</x>
        <y>20</y>
-       <width>161</width>
+       <width>151</width>
        <height>391</height>
       </rect>
      </property>
@@ -110,7 +110,7 @@
     <widget class="QPushButton" name="disconnect">
      <property name="geometry">
       <rect>
-       <x>600</x>
+       <x>560</x>
        <y>420</y>
        <width>95</width>
        <height>28</height>
@@ -256,6 +256,11 @@
        <height>41</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
       <string notr="true">border-radius:40px;border:1px solid grey</string>
      </property>
@@ -279,15 +284,19 @@
     <widget class="QCommandLinkButton" name="commandLinkButton">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>140</x>
        <y>360</y>
-       <width>211</width>
+       <width>201</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>14</pointsize>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <underline>false</underline>
       </font>
      </property>
      <property name="layoutDirection">
