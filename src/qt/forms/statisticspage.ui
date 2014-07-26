@@ -33,10 +33,17 @@ font-family:'Open Sans,sans-serif';</string>
       </size>
      </property>
      <property name="frameShape">
+<<<<<<< HEAD
+      <enum>QFrame::NoFrame</enum>
+=======
       <enum>QFrame::StyledPanel</enum>
+>>>>>>> master
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
      </property>
      <widget class="QPushButton" name="startButton">
       <property name="geometry">
@@ -93,6 +100,12 @@ p, li { white-space: pre-wrap; }
         <property name="fieldGrowthPolicy">
          <enum>QFormLayout::FieldsStayAtSizeHint</enum>
         </property>
+<<<<<<< HEAD
+        <property name="formAlignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+=======
+>>>>>>> master
         <property name="horizontalSpacing">
          <number>139</number>
         </property>
