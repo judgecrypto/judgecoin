@@ -10,7 +10,6 @@ Debian
 First, make sure that the required packages for Qt5 development of your
 distribution are installed, for Debian and Ubuntu these are:
 
-	For the GUI Linux Version:
 ::
 
 	git clone https://github.com/judgecrypto/judgecoin.git
