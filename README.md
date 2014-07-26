@@ -6,7 +6,7 @@ COIN SPECIFICATIONS
 - 500 Coins per PoW block 
 - PoW Algorithm: X13 
 - PoW + PoS Hybrid 
-- PoW Blocks: 43200
+- PoW Blocks: 38640
 - PoS interest 6% Annually 
 - 24hr PoS min coin age 
 - 60 second block target 
