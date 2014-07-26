@@ -1,12 +1,12 @@
 
-Judgecoin 
+Judgecoin - Now in full PoS mode! Wallet is now v1.1.1
 
 COIN SPECIFICATIONS
 - Total coins: Estimated 15,000,000 Between PoW and PoS blocks 
 - 500 Coins per PoW block 
 - PoW Algorithm: X13 
 - PoW + PoS Hybrid 
-- PoW Blocks: 43200
+- PoW Blocks: 38640
 - PoS interest 6% Annually 
 - 24hr PoS min coin age 
 - 60 second block target 

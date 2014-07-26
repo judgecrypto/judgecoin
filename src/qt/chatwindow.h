@@ -54,6 +54,9 @@ public:
         void tabClosing(int index);
 
 
+private slots:
+        void on_commandLinkButton_clicked();
+
 private:
 	Ui::ChatWindowClass *ui;
     ClientModel *model;
