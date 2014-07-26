@@ -71,6 +71,13 @@ make
 sudo make install
 cd ..
 
+Build Boost 1.55 from source:
+wget -O boost_1_55_0.tar.gz http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
+tar xzvf boost_1_55_0.tar.gz
+cd boost_1_55_0/
+./bootstrap.sh
+./b2
+
 Dependency Build Instructions: Gentoo
 -------------------------------------
 
