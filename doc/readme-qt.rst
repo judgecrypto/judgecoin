@@ -15,7 +15,7 @@ distribution are installed, for Debian and Ubuntu these are:
 For the GUI Linux Version:
 git clone https://github.com/judgecrypto/judgecoin.git
 
-<code>sudo apt-get install qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libssl-dev libdb++-dev
+sudo apt-get install qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libssl-dev libdb++-dev
 
 wget http://miniupnp.tuxfamily.org/files/download.php?file=miniupnpc-1.9.tar.gz -O miniupnpc-1.9.tar.gz
 tar xvfz miniupnpc-1.9.tar.gz
@@ -32,7 +32,7 @@ cd boost_1_55_0/
 
 cd ~/judgecoin/
 qmake
-make</code>
+make
 
 ::
 
