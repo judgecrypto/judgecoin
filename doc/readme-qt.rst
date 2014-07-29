@@ -12,24 +12,17 @@ distribution are installed, for Debian and Ubuntu these are:
 
 ::
 
-	git clone https://github.com/judgecrypto/judgecoin.git
-	sudo apt-get install qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libssl-dev libdb++-dev
-	wget http://miniupnp.tuxfamily.org/files/download.php?file=miniupnpc-1.9.tar.gz -O miniupnpc-1.9.tar.gz
-	tar xvfz miniupnpc-1.9.tar.gz
-	cd miniupnpc-1.9/
-	make
-	sudo make install
-	cd ..
-	wget -O boost_1_55_0.tar.gz http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
-	tar xzvf boost_1_55_0.tar.gz
-	cd boost_1_55_0/
-	./bootstrap.sh
-	./b2
-	cd ~/judgecoin/
-	qmake
-	make
+    apt-get install qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools \
+        build-essential libboost-dev libboost-system-dev \
+        libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
+        libssl-dev libdb++-dev
+
+then execute the following:
 
 ::
+
+    qmake
+    make
 
 Alternatively, install Qt Creator and open the `judgecoin-qt.pro` file.
 

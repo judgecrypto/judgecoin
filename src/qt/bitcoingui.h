@@ -10,14 +10,12 @@ class WalletModel;
 class TransactionView;
 class OverviewPage;
 class StatisticsPage;
-class BlockBrowser;
 class DonatePage;
 class AddressBookPage;
 class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
-class ChatWindow;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -65,9 +63,7 @@ private:
 
     OverviewPage *overviewPage;
     StatisticsPage *statisticsPage;
-	BlockBrowser *blockBrowser;
     DonatePage *donatePage;
-	ChatWindow *chatWindow;
     QWidget *transactionsPage;
     AddressBookPage *addressBookPage;
     AddressBookPage *receiveCoinsPage;
@@ -86,7 +82,6 @@ private:
     QAction *statisticsAction;
 	QAction *blockAction;
     QAction *donateAction;
-	QAction *chatAction;
     QAction *historyAction;
     QAction *quitAction;
     QAction *sendCoinsAction;
@@ -94,6 +89,7 @@ private:
     QAction *signMessageAction;
     QAction *verifyMessageAction;
     QAction *aboutCardAction;
+   /* QAction *facebookAction; */
     QAction *aboutAction;
     QAction *receiveCoinsAction;
     QAction *optionsAction;
@@ -152,8 +148,6 @@ private slots:
     void gotoOverviewPage();
     /** Switch to statistics page*/
     void gotoStatisticsPage();
-	/** Switch to block explorer*/
-    void gotoBlockBrowser();
 	/** Switch to donate page*/
     void gotoDonatePage();
     /** Switch to history (transactions) page */
@@ -164,7 +158,6 @@ private slots:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage();
-	void gotoChatPage();
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
@@ -174,6 +167,8 @@ private slots:
     /** Show configuration dialog */
     void optionsClicked();
     void aboutCardClicked();
+    /* void facebookClicked(); */
+
     /** Show about dialog */
     void aboutClicked();
 #ifndef Q_OS_MAC

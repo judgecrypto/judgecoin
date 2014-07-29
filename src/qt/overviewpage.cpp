@@ -12,6 +12,8 @@
 #include <QAbstractItemDelegate>
 #include <QPainter>
 #include <QFrame>
+#include <QDesktopServices>
+#include <QUrl>
 
 #define DECORATION_SIZE 50
 #define NUM_ITEMS 8
@@ -204,4 +206,34 @@ void OverviewPage::showOutOfSyncWarning(bool fShow)
 {
     ui->labelWalletStatus->setVisible(fShow);
     ui->labelTransactionsStatus->setVisible(fShow);
+}
+
+void OverviewPage::on_commandLinkButton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://facebook.com/judgecoin", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_commandLinkButton_2_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://twitter.com/judgecoin", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_commandLinkButton_3_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://reddit.com/r/judgecoin", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_commandLinkButton_4_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://judgecoin.com/chat", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_commandLinkButton_5_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://judgecoin.com/blockchain", QUrl::TolerantMode));
+}
+
+void OverviewPage::on_commandLinkButton_6_clicked()
+{
+   QDesktopServices::openUrl(QUrl("http://www.judgecoin.com/HELPDESK/tabid/103/Default.aspx", QUrl::TolerantMode));
 }

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>575</width>
-    <height>417</height>
+    <height>497</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -193,7 +193,7 @@ font-family:'Open Sans,sans-serif';</string>
              </font>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20px; font-weight:600; color:#000000;&quot;&gt;Wallet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20px; font-weight:600; color:#000000;&quot;&gt;Judgecoin Wallet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
@@ -437,6 +437,246 @@ font-family:'Open Sans,sans-serif';</string>
           <property name="styleSheet">
            <string notr="true">image: url(:/images/wallet);</string>
           </property>
+          <widget class="QCommandLinkButton" name="commandLinkButton">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>110</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Open Sans,sans-serif</family>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>false</bool>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCommandLinkButton:hover {background-color:qlineargradient(x1: 0, y1: 0, x2: 2, y2: 2,stop: 0 rgb(127,154,131), stop: 1 rgb(254,234,145),stop: 2 rgb(127,154,131));} QToolBar QToolButton { font-family:Century Gothic;padding-left:10px;padding-right:50px;padding-top:10px;padding-bottom:10px; width:100%; color: white; text-align: left; background-color: rgb(127,154,131) } </string>
+           </property>
+           <property name="inputMethodHints">
+            <set>Qt::ImhNone</set>
+           </property>
+           <property name="text">
+            <string>Facebook</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/face</normaloff>:/icons/face</iconset>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QCommandLinkButton" name="commandLinkButton_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>90</y>
+             <width>110</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Open Sans,sans-serif</family>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>false</bool>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::TabFocus</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCommandLinkButton:hover {background-color:qlineargradient(x1: 0, y1: 0, x2: 2, y2: 2,stop: 0 rgb(127,154,131), stop: 1 rgb(254,234,145),stop: 2 rgb(127,154,131));} QToolBar QToolButton { font-family:Century Gothic;padding-left:10px;padding-right:50px;padding-top:10px;padding-bottom:10px; width:100%; color: white; text-align: left; background-color: rgb(127,154,131) } </string>
+           </property>
+           <property name="text">
+            <string>Twitter</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/twitter</normaloff>:/icons/twitter</iconset>
+           </property>
+          </widget>
+          <widget class="QCommandLinkButton" name="commandLinkButton_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>130</y>
+             <width>110</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Open Sans,sans-serif</family>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>false</bool>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::TabFocus</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCommandLinkButton:hover {background-color:qlineargradient(x1: 0, y1: 0, x2: 2, y2: 2,stop: 0 rgb(127,154,131), stop: 1 rgb(254,234,145),stop: 2 rgb(127,154,131));} QToolBar QToolButton { font-family:Century Gothic;padding-left:10px;padding-right:50px;padding-top:10px;padding-bottom:10px; width:100%; color: white; text-align: left; background-color: rgb(127,154,131) } </string>
+           </property>
+           <property name="text">
+            <string>Reddit</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/reddit</normaloff>:/icons/reddit</iconset>
+           </property>
+          </widget>
+          <widget class="QCommandLinkButton" name="commandLinkButton_4">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>50</y>
+             <width>135</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Open Sans,sans-serif</family>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCommandLinkButton:hover {background-color:qlineargradient(x1: 0, y1: 0, x2: 2, y2: 2,stop: 0 rgb(127,154,131), stop: 1 rgb(254,234,145),stop: 2 rgb(127,154,131));} QToolBar QToolButton { font-family:Century Gothic;padding-left:10px;padding-right:50px;padding-top:10px;padding-bottom:10px; width:100%; color: white; text-align: left; background-color: rgb(127,154,131) } </string>
+           </property>
+           <property name="text">
+            <string>Official Chat</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/www</normaloff>:/icons/www</iconset>
+           </property>
+          </widget>
+          <widget class="QCommandLinkButton" name="commandLinkButton_5">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>90</y>
+             <width>135</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Open Sans,sans-serif</family>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCommandLinkButton:hover {background-color:qlineargradient(x1: 0, y1: 0, x2: 2, y2: 2,stop: 0 rgb(127,154,131), stop: 1 rgb(254,234,145),stop: 2 rgb(127,154,131));} QToolBar QToolButton { font-family:Century Gothic;padding-left:10px;padding-right:50px;padding-top:10px;padding-bottom:10px; width:100%; color: white; text-align: left; background-color: rgb(127,154,131) } </string>
+           </property>
+           <property name="text">
+            <string>Block Explorer</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
+           </property>
+          </widget>
+          <widget class="QCommandLinkButton" name="commandLinkButton_6">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>130</y>
+             <width>135</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Open Sans,sans-serif</family>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCommandLinkButton:hover {background-color:qlineargradient(x1: 0, y1: 0, x2: 2, y2: 2,stop: 0 rgb(127,154,131), stop: 1 rgb(254,234,145),stop: 2 rgb(127,154,131));} QToolBar QToolButton { font-family:Century Gothic;padding-left:10px;padding-right:50px;padding-top:10px;padding-bottom:10px; width:100%; color: white; text-align: left; background-color: rgb(127,154,131) } </string>
+           </property>
+           <property name="text">
+            <string>Help Desk</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/export</normaloff>:/icons/export</iconset>
+           </property>
+          </widget>
          </widget>
         </item>
         <item>
@@ -459,6 +699,8 @@ font-family:'Open Sans,sans-serif';</string>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>
