@@ -20,9 +20,7 @@
 #include "transactionview.h"
 #include "overviewpage.h"
 #include "statisticspage.h"
-#include "blockbrowser.h"
 #include "donatepage.h"
-#include "chatwindow.h"
 #include "bitcoinunits.h"
 #include "guiconstants.h"
 #include "askpassphrasedialog.h"
@@ -81,9 +79,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     notificator(0),
     rpcConsole(0)
 {
-    QMainWindow::resize(970, 600);
+    setFixedSize(950, 550);
     setWindowTitle(tr("Judgecoin") + " " + tr("Wallet"));
-    qApp->setStyleSheet("QMainWindow { background-image:url(:images/bkg);border:none;font-family:'Open Sans,sans-serif'; } #frame { } QToolBar QLabel { padding-top:15px;padding-bottom:10px;margin:0px; } #spacer { background:rgb(127,154,131);border:none; } #toolbar2 { border:none;width:10px; background-color:qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,stop: 0 rgb(246,163,43), stop: 1 rgb(254,234,145)); } #toolbar { border:none;height:100%;padding-top:20px; background: rgb(127,154,131); text-align: left; color: white;min-width:100px;max-width:100px;} QToolBar QToolButton:hover {background-color:qlineargradient(x1: 0, y1: 0, x2: 2, y2: 2,stop: 0 rgb(127,154,131), stop: 1 rgb(254,234,145),stop: 2 rgb(127,154,131));} QToolBar QToolButton { font-family:Century Gothic;padding-left:10px;padding-right:50px;padding-top:10px;padding-bottom:10px; width:100%; color: white; text-align: left; background-color: rgb(127,154,131) } #labelMiningIcon { padding-left:5px;font-family:Century Gothic;width:100%;font-size:10px;text-align:center;color:white; } QMenu { background: rgb(254,234,145); color:black; padding-bottom:10px; } QMenu::item { color:black; background-color: transparent; } QMenu::item:selected { background-color:qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,stop: 0 rgb(254,234,145), stop: 1 rgb(246,163,43)); } QMenuBar { background-color:qlineargradient(x1: 1, y1: 0.5, x2: 0.5, y2: 0.0,stop: 0 rgb(254,234,145), stop: 1 rgb(246,163,43)); color:black; } QMenuBar::item { font-size:12px;padding-bottom:8px;padding-top:8px;padding-left:15px;padding-right:15px;color:black; background-color: transparent; } QMenuBar::item:selected { background-color:qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,stop: 0 rgb(254,234,145), stop: 1 rgb(246,163,43)); }");
+    qApp->setStyleSheet("QMainWindow { background-image:url(:images/bkg);border:none;font-family:'Open Sans,sans-serif'; } #frame { } QToolBar QLabel { padding-top:15px;padding-bottom:10px;margin:0px; } #spacer { background:rgb(127,154,131);border:none; } #toolbar2 { border:none;width:10px; background-color:rgb(127,154,131); } #toolbar { border:none;height:100%;padding-top:20px; background: rgb(127,154,131); text-align: left; color: white;min-width:200px;max-width:200px;} QToolBar QToolButton:hover {background-color:qlineargradient(x1: 0, y1: 0, x2: 2, y2: 2,stop: 0 rgb(127,154,131), stop: 1 rgb(254,234,145),stop: 2 rgb(127,154,131));} QToolBar QToolButton { font-family:Century Gothic;padding-left:10px;padding-right:50px;padding-top:10px;padding-bottom:10px; width:100%; color: white; text-align: left; background-color: rgb(127,154,131) } #labelMiningIcon { padding-left:5px;font-family:Century Gothic;width:100%;font-size:10px;text-align:center;color:white; } QMenu { background: rgb(254,234,145); color:black; padding-bottom:10px; } QMenu::item { color:black; background-color: transparent; } QMenu::item:selected { background-color:qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,stop: 0 rgb(254,234,145), stop: 1 rgb(246,163,43)); } QMenuBar { background-color:qlineargradient(x1: 1, y1: 0.5, x2: 0.5, y2: 0.0,stop: 0 rgb(254,234,145), stop: 1 rgb(246,163,43)); color:black; } QMenuBar::item { font-size:12px;padding-bottom:8px;padding-top:8px;padding-left:15px;padding-right:15px;color:black; background-color: transparent; } QMenuBar::item:selected { background-color:qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,stop: 0 rgb(254,234,145), stop: 1 rgb(246,163,43)); }");
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -109,10 +107,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     // Create tabs
     overviewPage = new OverviewPage();
     statisticsPage = new StatisticsPage(this);
-    chatWindow = new ChatWindow(this);
-	blockBrowser = new BlockBrowser(this);
 	donatePage = new DonatePage(this);
-
     transactionsPage = new QWidget(this);
     QVBoxLayout *vbox = new QVBoxLayout();
     transactionView = new TransactionView(this);
@@ -130,8 +125,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     centralWidget = new QStackedWidget(this);
     centralWidget->addWidget(overviewPage);
     centralWidget->addWidget(statisticsPage);
-	centralWidget->addWidget(chatWindow);
-	centralWidget->addWidget(blockBrowser);
 	centralWidget->addWidget(donatePage);
     centralWidget->addWidget(transactionsPage);
     centralWidget->addWidget(addressBookPage);
@@ -183,7 +176,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
                                "text-align: center;"
                                "color:rgba(0,0,0,100);"
                                "border-radius: 5px;"
-                               "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(182, 182, 182, 100), stop:1 rgba(209, 209, 209, 100));"
+                               "background-color: transparent;"
                                    "}"
                                "QProgressBar::chunk{"
                                "background-color: rgba(0,255,0,100);"
@@ -245,13 +238,8 @@ void BitcoinGUI::createActions()
     statisticsAction->setCheckable(true);
     tabGroup->addAction(statisticsAction);
 
-    chatAction = new QAction(QIcon(":/icons/social"), tr("&Social"), this);
-    chatAction->setToolTip(tr("View chat"));
-    chatAction->setCheckable(true);
-    tabGroup->addAction(chatAction);	
-
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a judgecoin address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a Judgecoin address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
@@ -274,11 +262,7 @@ void BitcoinGUI::createActions()
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 	
-	blockAction = new QAction(QIcon(":/icons/block"), tr("&Block Explorer"), this);
-    blockAction->setToolTip(tr("Explore the BlockChain"));
-    blockAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
-    blockAction->setCheckable(true);
-    tabGroup->addAction(blockAction);
+
 	
     donateAction = new QAction(QIcon(":/icons/ex"), tr("&Donate"), this);
     donateAction->setToolTip(tr("Donate"));
@@ -286,12 +270,10 @@ void BitcoinGUI::createActions()
     donateAction->setCheckable(true);
     tabGroup->addAction(donateAction);
 
-	connect(blockAction, SIGNAL(triggered()), this, SLOT(gotoBlockBrowser()));
 	connect(donateAction, SIGNAL(triggered()), this, SLOT(gotoDonatePage()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
 	connect(statisticsAction, SIGNAL(triggered()), this, SLOT(gotoStatisticsPage()));
-	connect(chatAction, SIGNAL(triggered()), this, SLOT(gotoChatPage()));
     connect(sendCoinsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(sendCoinsAction, SIGNAL(triggered()), this, SLOT(gotoSendCoinsPage()));
     connect(receiveCoinsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
@@ -305,16 +287,18 @@ void BitcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutCardAction = new QAction(QIcon(":/icons/www"), tr("judgecoin Website"), this);
-    aboutCardAction->setToolTip(tr("Judge Coin Webpage"));
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About judgecoin"), this);
-    aboutAction->setToolTip(tr("Show information about judgecoin"));
+    aboutCardAction = new QAction(QIcon(":/icons/www"), tr("Judgecoin Website"), this);
+    aboutCardAction->setToolTip(tr("Judgecoin Webpage"));
+   /* facebookAction = new QAction(QIcon(":/icons/qtlogo"), tr("Facebook"), this);
+    facebookAction->setToolTip(tr("Judgecoin Facebook page")); */
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About Judgecoin"), this);
+    aboutAction->setToolTip(tr("Show information about Judgecoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/icons/qtlogo"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for judgecoin"));
+    optionsAction->setToolTip(tr("Modify configuration options for Judgecoin"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -338,6 +322,7 @@ void BitcoinGUI::createActions()
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutCardAction, SIGNAL(triggered()), this, SLOT(aboutCardClicked()));
+    /*connect(facebookAction, SIGNAL(triggered()), this, SLOT(facebookClicked()));*/
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
     connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
     connect(optionsAction, SIGNAL(triggered()), this, SLOT(optionsClicked()));
@@ -367,6 +352,7 @@ void BitcoinGUI::createMenuBar()
     file->addAction(exportAction);
     file->addAction(signMessageAction);
     file->addAction(verifyMessageAction);
+   /* file->addAction(facebookAction);*/
     file->addSeparator();
     file->addAction(quitAction);
 
@@ -405,7 +391,6 @@ void BitcoinGUI::createToolBars()
 	toolbar->addAction(statisticsAction);
 	toolbar->addAction(blockAction);
 	toolbar->addAction(donateAction);
-	toolbar->addAction(chatAction);
 	toolbar->addAction(unlockWalletAction);
 	toolbar->addAction(lockWalletAction);
 //	toolbar->addAction(exportAction);
@@ -474,10 +459,8 @@ void BitcoinGUI::setWalletModel(WalletModel *walletModel)
         receiveCoinsPage->setModel(walletModel->getAddressTableModel());
         sendCoinsPage->setModel(walletModel);
         signVerifyMessageDialog->setModel(walletModel);
-
+// I think this is where the order of tabs belong
         statisticsPage->setModel(clientModel);
-		chatWindow->setModel(clientModel);
-		blockBrowser->setModel(clientModel);
         donatePage->setModel(clientModel);
         setEncryptionStatus(walletModel->getEncryptionStatus());
         connect(walletModel, SIGNAL(encryptionStatusChanged(int)), this, SLOT(setEncryptionStatus(int)));
@@ -498,7 +481,7 @@ void BitcoinGUI::createTrayIcon()
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("judgecoin client"));
+    trayIcon->setToolTip(tr("Judgecoin client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -554,6 +537,11 @@ void BitcoinGUI::aboutCardClicked()
     QDesktopServices::openUrl(QUrl("http://www.judgecoin.com/"));
 }
 
+/*void BitcoinGUI::facebookClicked()
+{
+    QDesktopServices::openUrl(QUrl("http://www.facebook.com/judgecoin"));
+}*/
+
 void BitcoinGUI::aboutClicked()
 {
     AboutDialog dlg;
@@ -573,7 +561,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to judgecoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Judgecoin network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
@@ -793,28 +781,10 @@ void BitcoinGUI::gotoDonatePage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void BitcoinGUI::gotoBlockBrowser()
-{
-    blockAction->setChecked(true);
-    centralWidget->setCurrentWidget(blockBrowser);
-
-    exportAction->setEnabled(false);
-    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
-}
-
 void BitcoinGUI::gotoStatisticsPage()
 {
     statisticsAction->setChecked(true);
     centralWidget->setCurrentWidget(statisticsPage);
-
-    exportAction->setEnabled(false);
-    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
-}
-
-void BitcoinGUI::gotoChatPage()
-{
-    chatAction->setChecked(true);
-    centralWidget->setCurrentWidget(chatWindow);
 
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);

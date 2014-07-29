@@ -41,8 +41,8 @@ CBigNum bnProofOfWorkFirstBlock(~uint256(0) >> 30);
 
 unsigned int nTargetSpacing = 1 * 60; // 60 seconds
 unsigned int nRetarget = 30;
-unsigned int nStakeMinAge = 24 * 60 * 60; // 1 day
-unsigned int nStakeMaxAge = -1;           //unlimited
+unsigned int nStakeMinAge = 24 * 60 * 60 * 1;     // 1 day
+unsigned int nStakeMaxAge = -1;     // unlimited
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 static const int64_t nTargetTimespan_legacy = nTargetSpacing * nRetarget; // every 30 blocks
 static const int64_t nInterval = nTargetTimespan_legacy / nTargetSpacing;

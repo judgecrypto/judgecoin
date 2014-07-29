@@ -1,4 +1,4 @@
-IDI_ICON1 ICON DISCARDABLE "icons/judge_256.ico"
+IDI_ICON1 ICON DISCARDABLE "icons/judge_64.ico"
 
 #include <windows.h>             // needed for VERSIONINFO
 #include "../../clientversion.h" // holds the needed client version information
@@ -19,10 +19,10 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "judgecoin"
-            VALUE "FileDescription",    "judgecoin-Qt (OSS GUI client for judgecoin)"
+            VALUE "FileDescription",    "judgecoin-Qt"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "judgecoin-qt"
-            VALUE "LegalCopyright",     "2014 The judgecoin developers"
+            VALUE "LegalCopyright",     "2014 The Judgecoin developers: @sigwo"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "judgecoin-qt.exe"
             VALUE "ProductName",        "judgecoin-Qt"

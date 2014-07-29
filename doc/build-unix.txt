@@ -71,36 +71,6 @@ make
 sudo make install
 cd ..
 
-Build Boost 1.55 from source:
-wget -O boost_1_55_0.tar.gz http://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download
-tar xzvf boost_1_55_0.tar.gz
-cd boost_1_55_0/
-./bootstrap.sh
-./b2
-
-Before running:
-export LC_ALL=C
-sudo adduser judgecoin && usermod -g users judgecoin && delgroup judgecoin && chmod 0701 /home/judgecoin
-mkdir /home/judgecoin/bin
-cp ~/judgecoin/src/judgecoind  /home/judgecoin/bin/judgecoind
-chown -R judgecoin:users /home/judgecoin/bin
-cd && rm -rf judgecoin
-
-su judgecoin
-cd && bin/judgecoind
-nano ~/.judgecoin/judgecoin.conf && chmod 0600 ~/.judgecoin/judgecoin.conf
-Then type in:
-daemon=1
-rpcuser=<username>
-rpcpassword=<secure password>
-dnsseed=1
-rpcthreads=100
-irc=0
-
-Save the file.
-
-bin/judgecoind
-
 Dependency Build Instructions: Gentoo
 -------------------------------------
 

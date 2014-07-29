@@ -47,6 +47,12 @@ private:
 private slots:
     void updateDisplayUnit();
     void handleTransactionClicked(const QModelIndex &index);
+    void on_commandLinkButton_clicked();
+    void on_commandLinkButton_2_clicked();
+    void on_commandLinkButton_3_clicked();
+    void on_commandLinkButton_4_clicked();
+    void on_commandLinkButton_5_clicked();
+    void on_commandLinkButton_6_clicked();
 };
 
 #endif // OVERVIEWPAGE_H
